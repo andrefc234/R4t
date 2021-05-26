@@ -1,0 +1,54 @@
+from Crypto.Cipher import AES
+from Crypto import Random
+import os 
+import os.path
+from os.path import isfile, join
+import random
+import hashlib
+class Aes:
+    def __init__(self, key):
+        self.key = key
+        
+    def pad(self, s):
+        return s+ b"\0" * (AES.block_size - len(s) % AES.block_size)
+
+    def encrypt(self,message,key,key_size = 256):
+        if isinstance(message, str):
+            message = self.pad(message.encode())
+        else:
+            message = self.pad(message)
+        iv = os.urandom(16)
+        
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        return iv + cipher.encrypt(message)
+
+    def decrypt(self,cipherText, key):
+        iv = cipherText[:AES.block_size]
+        
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        plaintext = cipher.decrypt(cipherText[AES.block_size:])
+        res = plaintext.rstrip(b"\0")
+        return res
+ 
+    def encryptFile(self, fileName):
+        with open(fileName, 'rb') as fo:
+            plaintext = fo.read()
+            fo.close()
+        enc = self.encrypt(plaintext,self.key)
+        with open(fileName + ".enc", 'wb') as fo:
+            fo.write(enc)
+        os.remove(fileName)
+
+    def decrypt_file(self, file_name):
+        with open(file_name, 'rb') as fo:
+            ciphertext = fo.read()
+        dec = self.decrypt(ciphertext, self.key)
+        with open(file_name[:-4], 'wb') as fo:
+            fo.write(dec)
+        os.remove(file_name)
+
+
+
+    
+    
+

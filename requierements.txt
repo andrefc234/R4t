@@ -1,0 +1,5 @@
+python-socketio[client]
+pyautogui
+pynput
+pyinstaller
+pywin32
