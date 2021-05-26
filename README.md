@@ -17,10 +17,24 @@
 
 
 <div style="display: flex;">
-
+- Creates an undetectable payload.
+- Payload to deactivate windows defender.
+- Ransomware capabilities.
+- Get full usage of the victims PC or linux system.
+- Botnet capabilities under development.
  
 
 </div>
+
+
+### Usage:
+
+<div style="display: flex;">
+
+
+
+</div>
+
 
 
 
