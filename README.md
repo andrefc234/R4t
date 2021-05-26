@@ -42,7 +42,8 @@
 ### Screenshoot:
 <div style="display: flex;">
  <img  alt="screen"  src="https://github.com/andrefc234/R4t/blob/main/pictures/Screen1.png" />
-  <img  alt="screen"  src="https://github.com/andrefc234/R4t/blob/main/pictures/screen2.png" />
+ <br/>
+  <img  alt="screen"  src="https://github.com/andrefc234/R4t/blob/main/pictures/screen(2).png" />
 </div>
 
 
