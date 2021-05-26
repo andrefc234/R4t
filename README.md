@@ -28,7 +28,13 @@
 ### Usage:
 
 <div style="display: flex;">
-
+ 
+ 
+```bash
+  git clone https://github.com/andrefc234/R4t.git
+  sudo bash setup.sh
+  sudo bash start.sh
+  ```
 
 
 </div>
