@@ -17,13 +17,11 @@
 
 
 <div style="display: flex;">
-- Creates an undetectable payload.
-- Payload to deactivate windows defender.
-- Ransomware capabilities.
-- Get full usage of the victims PC or linux system.
-- Botnet capabilities under development.
- 
-
+ <p>- Creates an undetectable payload.</p>
+ <p>- Payload to deactivate windows defender.</p>
+ <p>- Ransomware capabilities.</p>
+ <p>- Get full usage of the victims PC or linux system.</p>
+ <p>- Botnet capabilities under development.</p>
 </div>
 
 
